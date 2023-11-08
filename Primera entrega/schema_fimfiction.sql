@@ -16,8 +16,7 @@ CREATE TABLE IF NOT EXISTS Usuarios (
 
 -- Tabla de generos de los usuarios
 CREATE TABLE IF NOT EXISTS Generos (
-    `id` INT PRIMARY KEY AUTO_INCREMENT,
-    `id_user` INT NOT NULL,
+    `id_user` INT PRIMARY KEY NOT NULL,
     `gender` varchar(20), -- Genero del usuario, puede ser cualquier texto, incluso un valor nulo
     FOREIGN KEY (id_user) REFERENCES Usuarios(id)
 );
@@ -53,7 +52,6 @@ CREATE TABLE IF NOT EXISTS FicsFavs (
     FOREIGN KEY (id_usuario) REFERENCES Usuarios(id),
     FOREIGN KEY (id_fic) REFERENCES Fics(id)
 );
-
 
 -- tabla de fics votados
 CREATE TABLE IF NOT EXISTS FicsVotos (
