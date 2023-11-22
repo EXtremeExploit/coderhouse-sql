@@ -178,7 +178,7 @@ CREATE PROCEDURE SP_USUARIOS_ORDENADOS(
     IN CampoOrdenamiento VARCHAR(100), -- Por que campo de la tabla ordenar
     IN OrdenAscendente BOOLEAN) -- Ordenar Ascendente? (true/false)
 BEGIN
-    SET @query = CONCAT('SELECT * FROM Usuarios ORDER BY ', CampoOrdenamiento, IF(OrdenAscendente, 'ASC', 'DESC'));
+    SET @query = CONCAT('SELECT * FROM Usuarios ORDER BY ', CampoOrdenamiento, IF(OrdenAscendente, ' ASC', ' DESC'));
 
     PREPARE stmt FROM @query;
     EXECUTE stmt;
