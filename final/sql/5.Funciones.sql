@@ -1,0 +1,28 @@
+DROP FUNCTION IF EXISTS CantFicsPorUsuarioId;
+DELIMITER //
+CREATE FUNCTION CantFicsPorUsuarioId(id INT)
+RETURNS INT
+DETERMINISTIC
+BEGIN
+    DECLARE cant INT;
+
+    SELECT COUNT(*) INTO cant FROM Fics WHERE id_creador = id;
+
+    return cant;
+END//
+DELIMITER ;
+
+
+DROP FUNCTION IF EXISTS CantFicsPorAño;
+DELIMITER //
+CREATE FUNCTION CantFicsPorAño(año INT)
+RETURNS INT
+DETERMINISTIC
+BEGIN
+    DECLARE cant INT;
+
+    SELECT COUNT(*) INTO cant FROM `Fics` WHERE year(`time`) = año;
+
+    return cant;
+END//
+DELIMITER ;

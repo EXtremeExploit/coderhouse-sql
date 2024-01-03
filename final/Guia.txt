@@ -1,0 +1,16 @@
+Instrucciones de implementacion de la base de datos
+
+Para asegurarse de la correcta creacion siga el orden proporcionado en este documento.
+
+Los scripts estan en la carpeta "sql".
+
+1.SchemaTablas.sql | Crea la base de datos + sus tablas
+2.Triggers.sql | Crea los triggers de las tablas
+3.Inserts.sql | Inserta informacion basica de ejemplo
+4.Vistas.sql | Crea las vistas
+5.Funciones.sql | Define las funciones de la base de datis
+6.Procedimientos.sql | Genera los stores procedures
+7.Usuarios.sql | Crea 2 usuarios
+8.TCL.sql | Hace transacciones de ejemplo
+
+Si no queres ejecutar los scripts uno por uno Podes directamente ejecutar el archivo "schema_fimfiction.sql" en las misma carpeta que este txt
